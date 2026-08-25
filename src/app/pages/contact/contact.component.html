@@ -1,0 +1,100 @@
+<div class="page-hero">
+  <div class="container">
+    <p class="section-subtitle">Programări · Întrebări · Contact</p>
+    <h1 class="section-title">Contactează-ne</h1>
+    <div class="divider"><span class="leaf">❧</span></div>
+    <p class="page-hero-desc">Suntem aici pentru tine — rezervă-ți locul sau pune-ne orice întrebare.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container contact-grid">
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2 class="info-title">Informații</h2>
+
+      <div class="info-block">
+        <span class="info-icon">📍</span>
+        <div>
+          <strong>Adresă</strong>
+          <p>Brașov, România</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="info-icon">📞</span>
+        <div>
+          <strong>Telefon / Programări</strong>
+          <p><a href="tel:0779219099">0779 219 099</a></p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="info-icon">🕐</span>
+        <div>
+          <strong>Program</strong>
+          <p>Luni – Sâmbătă: 09:00 – 19:00</p>
+          <p>Duminică: La cerere</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="info-icon">📱</span>
+        <div>
+          <strong>Social Media</strong>
+          <p><a href="https://instagram.com" target="_blank">&#64;zethera.beauty</a></p>
+        </div>
+      </div>
+
+      <div class="whatsapp-btn">
+        <a href="https://wa.me/40779219099" target="_blank" class="btn-gold">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form-wrap">
+      <div *ngIf="!submitted()">
+        <h2 class="form-title">Trimite un mesaj</h2>
+        <p class="form-subtitle">Completează formularul și te contactăm în cel mai scurt timp.</p>
+
+        <div class="form-fields">
+          <div class="field">
+            <label>Numele tău *</label>
+            <input type="text" [(ngModel)]="formData.name" placeholder="ex. Maria Ionescu" required>
+          </div>
+          <div class="field">
+            <label>Telefon *</label>
+            <input type="tel" [(ngModel)]="formData.phone" placeholder="07xx xxx xxx" required>
+          </div>
+          <div class="field">
+            <label>Serviciu dorit</label>
+            <select [(ngModel)]="formData.service">
+              <option value="">— Alege un serviciu —</option>
+              <option *ngFor="let s of services" [value]="s">{{ s }}</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label>Mesaj</label>
+            <textarea [(ngModel)]="formData.message" rows="4" placeholder="Scrie-ne orice detaliu sau întrebare..."></textarea>
+          </div>
+          <div class="field full">
+            <button class="btn-gold-filled submit-btn" (click)="onSubmit()" [disabled]="!formData.name || !formData.phone">
+              Trimite mesajul →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="submitted()" class="success-message">
+        <span class="success-icon">✦</span>
+        <h3>Mulțumim!</h3>
+        <p>Mesajul tău a fost trimis. Te vom contacta în curând pentru confirmare.</p>
+        <button class="btn-gold" (click)="resetForm()" style="margin-top:1.5rem">Trimite alt mesaj</button>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<div class="page-hero">
+  <div class="container">
+    <p class="section-subtitle">Inspirație · Creație · Artă</p>
+    <h1 class="section-title">Galeria noastră</h1>
+    <div class="divider"><span class="leaf">❧</span></div>
+    <p class="page-hero-desc">Fiecare lucrare spune o poveste — descoperă creațiile noastre.</p>
+  </div>
+</div>
+
+<section class="gallery-section">
+  <div class="container">
+    <div class="filters">
+      <button
+        class="filter-btn"
+        *ngFor="let f of filters"
+        [class.active]="activeFilter() === f"
+        (click)="setFilter(f)">
+        {{ f | titlecase }}
+      </button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let item of filteredItems">
+        <div class="gallery-placeholder"
+          [style.background]="'linear-gradient(135deg, ' + item.colors[0] + ', ' + item.colors[1] + ')'">
+          <div class="placeholder-content">
+            <span class="placeholder-icon">✦</span>
+            <p>{{ item.label }}</p>
+          </div>
+          <div class="gallery-overlay">
+            <span class="overlay-cat">{{ item.category }}</span>
+            <span class="overlay-name">{{ item.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-note">
+      <p>📸 Urmărește-ne pe Instagram pentru cele mai recente creații</p>
+      <a href="https://instagram.com" target="_blank" class="btn-gold" style="margin-top:1rem;display:inline-block">&#64;zethera.beauty</a>
+    </div>
+  </div>
+</section>

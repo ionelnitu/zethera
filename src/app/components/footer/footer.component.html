@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="brand-name">ZETHERA</p>
+      <p class="brand-tagline">Beauty &amp; Care</p>
+      <div class="divider footer-divider"><span class="leaf">❧</span></div>
+      <p class="footer-desc">Eleganță, artă și îngrijire premium în inima Brașovului.</p>
+    </div>
+
+    <div class="footer-nav">
+      <h4>Navigare</h4>
+      <ul>
+        <li><a routerLink="/">Acasă</a></li>
+        <li><a routerLink="/servicii">Servicii</a></li>
+        <li><a routerLink="/galerie">Galerie</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><a href="tel:0779219099">0779 219 099</a></p>
+      <p>Brașov, România</p>
+      <p style="margin-top:0.75rem"><a href="https://instagram.com" target="_blank">&#64;zethera.beauty</a></p>
+      <a href="tel:0779219099" class="btn-gold footer-btn">Programare</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ year }} Zethera Beauty &amp; Care. Toate drepturile rezervate.</p>
+    </div>
+    <div class="footer-legal">
+              <div class="footer-socials">
+      @for (social of socials; track social.label) {
+        <a [href]="social.href" target="_blank">{{ social.label }}</a>
+      }
+    </div>
+      <a routerLink="/privacy">Confidențialitate</a>
+      <span class="footer-sep">·</span>
+      <button class="cookie-reset-btn" (click)="resetCookies()">
+        Resetează cookie
+      </button>
+             <div class="footer-anpc">
+      <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
+        <img
+          src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg"
+          alt="Solutionarea Alternativa a Litigiilor"
+        />
+      </a>
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
+        <img
+          src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sol.svg"
+          alt="Solutionarea Online a Litigiilor"
+        />
+      </a>
+    </div>
+    </div>
+
+  </div>
+</footer>

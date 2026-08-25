@@ -1,0 +1,38 @@
+<div class="page-hero">
+  <div class="container">
+    <p class="section-subtitle">Nail Art · Îngrijire · Frumusețe</p>
+    <h1 class="section-title">Serviciile noastre</h1>
+    <div class="divider"><span class="leaf">❧</span></div>
+    <p class="page-hero-desc">Descoperă gama completă de servicii premium oferite la Zethera Beauty &amp; Care</p>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <div class="category-block" *ngFor="let cat of categories; let i = index" [id]="cat.id">
+      <div class="cat-header">
+        <span class="cat-icon">{{ cat.icon }}</span>
+        <div>
+          <h2 class="cat-title">{{ cat.title }}</h2>
+          <div class="cat-line"></div>
+        </div>
+      </div>
+      <div class="items-grid">
+        <div class="service-card" *ngFor="let item of cat.items">
+          <div class="card-dot"></div>
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-inner">
+    <p class="section-subtitle">Rezervă acum</p>
+    <h2 class="section-title">Pregătită pentru o experiență unică?</h2>
+    <div class="divider"><span class="leaf">❧</span></div>
+    <a href="tel:0779219099" class="btn-gold-filled">📞 0779 219 099</a>
+  </div>
+</section>

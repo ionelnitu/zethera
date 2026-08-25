@@ -1,0 +1,103 @@
+.page-hero {
+  padding: 10rem 0 5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #161208 0%, #111111 100%);
+  border-bottom: 1px solid rgba(201,149,106,0.15);
+
+  .page-hero-desc {
+    color: var(--white-muted);
+    font-size: 0.85rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.services-section {
+  padding: 5rem 0 4rem;
+}
+
+.category-block {
+  margin-bottom: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+
+  .cat-icon { font-size: 2rem; }
+
+  .cat-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .cat-line {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card {
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--divider);
+  background: var(--bg-card);
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(201,149,106,0.5);
+    background: var(--bg-card-hover);
+    transform: translateY(-3px);
+    .card-dot { background: var(--gold); transform: scale(1.4); }
+  }
+
+  .card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+    margin-bottom: 0.85rem;
+    transition: all 0.3s;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  p {
+    font-size: 0.78rem;
+    color: var(--white-muted);
+    line-height: 1.7;
+  }
+}
+
+.cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #1e1510, #2a1f12);
+  border-top: 1px solid var(--divider);
+  text-align: center;
+
+  .cta-inner { max-width: 600px; margin: 0 auto; }
+  .btn-gold-filled { margin-top: 1.5rem; font-size: 0.9rem; padding: 1rem 3rem; }
+}

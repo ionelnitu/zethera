@@ -1,0 +1,106 @@
+.page-hero {
+  padding: 10rem 0 5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #161208 0%, #111111 100%);
+  border-bottom: 1px solid rgba(201,149,106,0.15);
+  .page-hero-desc { color: var(--white-muted); font-size: 0.85rem; }
+}
+
+.gallery-section {
+  padding: 4rem 0 6rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--divider);
+  color: var(--white-muted);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover, &.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,149,106,0.08);
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.gallery-item {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover .gallery-placeholder { transform: scale(1.03); }
+  &:hover .gallery-overlay { opacity: 1; }
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--font-display);
+  .placeholder-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+  p { font-size: 0.9rem; letter-spacing: 0.15em; }
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  .overlay-cat {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .overlay-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 300;
+  }
+}
+
+.gallery-note {
+  text-align: center;
+  border-top: 1px solid var(--divider);
+  padding-top: 3rem;
+  color: var(--white-muted);
+  font-size: 0.85rem;
+}

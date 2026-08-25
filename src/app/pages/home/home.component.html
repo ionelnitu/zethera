@@ -1,0 +1,85 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content container">
+    <p class="hero-eyebrow">Brașov · Est. 2024</p>
+    <h1 class="hero-title">
+      Frumusețea<br><em>redefinită</em>
+    </h1>
+    <div class="divider"><span class="leaf">✦</span></div>
+    <p class="hero-desc">
+      Nail art de excepție, îngrijire premium și o experiență ce transformă fiecare vizită într-un ritual al eleganței.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/servicii" class="btn-gold-filled">Descoperă serviciile</a>
+      <a href="tel:0779219099" class="btn-gold">Programare</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container intro-grid">
+    <div class="intro-text">
+      <p class="section-subtitle">Despre noi</p>
+      <h2 class="section-title">Arta în fiecare detaliu</h2>
+      <div class="divider"><span class="leaf">❧</span></div>
+      <p>
+        La <strong>Zethera Beauty &amp; Care</strong>, fiecare serviciu este conceput cu atenție la detalii, pasiune pentru estetică și devotament față de clientele noastre. Folosim produse de calitate premium pentru rezultate durabile și o experiență cu adevărat relaxantă.
+      </p>
+      <p style="margin-top:1rem">
+        Fie că îți dorești unghii perfecte, un design unic sau un tratament de răsfăț, echipa noastră este pregătită să transforme viziunea ta în realitate.
+      </p>
+      <a routerLink="/servicii" class="btn-gold" style="margin-top:2rem; display:inline-block">Vezi serviciile</a>
+    </div>
+    <div class="intro-features">
+      <div class="feature-card" *ngFor="let f of features">
+        <div class="feature-icon">{{ f.icon }}</div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-subtitle">Ce oferim</p>
+      <h2 class="section-title">Servicii principale</h2>
+      <div class="divider"><span class="leaf">❧</span></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-item" *ngFor="let s of mainServices" (click)="goToServices()">
+        <div class="service-icon">{{ s.icon }}</div>
+        <h3>{{ s.name }}</h3>
+        <p>{{ s.desc }}</p>
+        <span class="service-arrow">→</span>
+      </div>
+    </div>
+    <div class="center">
+      <a routerLink="/servicii" class="btn-gold">Toate serviciile</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING BANNER -->
+<section class="booking-banner">
+  <div class="container booking-inner">
+    <div>
+      <p class="section-subtitle">Rezervă acum</p>
+      <h2 class="banner-title">Fă-ți o programare</h2>
+      <p class="banner-sub">Suntem disponibile pentru tine — contactează-ne oricând.</p>
+    </div>
+    <div class="banner-actions">
+      <a href="tel:0779219099" class="btn-gold-filled">
+        <span class="phone-icon">📞</span> 0779 219 099
+      </a>
+    </div>
+  </div>
+</section>

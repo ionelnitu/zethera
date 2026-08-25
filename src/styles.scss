@@ -1,0 +1,114 @@
+
+
+:root {
+  --bg: #111111;
+  --bg-card: #1e1e1e;
+  --bg-card-hover: #252525;
+  --gold: #C9956A;
+  --gold-light: #e0b48a;
+  --gold-dark: #a07048;
+  --white: #f5f0eb;
+  --white-muted: #c0b8b0;
+  --divider: rgba(201, 149, 106, 0.25);
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gold { color: var(--gold); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+  margin-bottom: 0.75rem;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+  }
+  .leaf { font-size: 1rem; color: var(--gold); }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn-gold {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+  &:hover {
+    background: var(--gold);
+    color: var(--bg);
+  }
+}
+
+.btn-gold-filled {
+  @extend .btn-gold;
+  background: var(--gold);
+  color: var(--bg);
+  &:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+  }
+}
+
+page-section {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1.25rem; }
+}

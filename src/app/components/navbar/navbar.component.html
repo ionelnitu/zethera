@@ -1,0 +1,19 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="nav-inner container">
+    <a routerLink="/" class="brand" (click)="closeMenu()">
+      <img src="../../../assets/logo.png" alt="Zethera">
+    </a>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen()">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">Acasă</a></li>
+      <li><a routerLink="/servicii" routerLinkActive="active" (click)="closeMenu()">Servicii</a></li>
+      <li><a routerLink="/galerie" routerLinkActive="active" (click)="closeMenu()">Galerie</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+      <li class="nav-cta"><a href="tel:0779219099" class="btn-gold">Programare</a></li>
+    </ul>
+  </div>
+</nav>
